@@ -1,0 +1,46 @@
+.container {
+  height: 120px;
+  width: 160px;
+  background-color: rgb(255 255 255 / 0.1);
+  border-radius: 12px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.button {
+  display: flex;
+}
+
+.icon {
+  height: 15px;
+  width: 15px;
+}
+
+.image {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 9px;
+  color: #d1d1d1;
+}
+
+.price {
+  font-size: 12px;
+  text-align: end;
+}
+
+

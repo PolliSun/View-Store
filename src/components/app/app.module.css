@@ -1,0 +1,6 @@
+.app {
+  margin: 0 auto;
+  height: calc(100vh - 123px);
+  min-inline-size: 360px;
+  max-inline-size: 1024px;
+}
