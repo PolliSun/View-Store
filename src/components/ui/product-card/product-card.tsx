@@ -7,9 +7,15 @@ import { ReactComponent as LikeIcon } from "../../../assets/images/like.svg";
 
 type ProductCardUIProps = {
   product: TProduct;
+  onLike: (id: number) => void;
+  onDelete: (id: number) => void;
 };
 
-export const ProductCardUI: FC<ProductCardUIProps> = ({ product }) => {
+export const ProductCardUI: FC<ProductCardUIProps> = ({
+  product,
+  onLike,
+  onDelete,
+}) => {
   return (
     <li className={styles.container}>
       <Link
@@ -22,17 +28,30 @@ export const ProductCardUI: FC<ProductCardUIProps> = ({ product }) => {
           src={product.image}
           alt="image product."
         />
-        <h2 className={styles.title}>{product.title}</h2>
-        <div className={styles.buttonContainer}>
-          <button className={styles.button}>
-            <DeleteIcon fill="#fff" className={styles.icon} />
-          </button>
-          <button className={styles.button}>
-            <LikeIcon fill="#fff" className={styles.icon} />
-          </button>
+        <div className={styles.info}>
+          <h2 className={styles.title}>{product.title}</h2>
+          <p className={styles.price}>${product.price}</p>
         </div>
-        <p className={styles.price}>${product.price}</p>
       </Link>
+      <button
+        className={styles.buttonDelete}
+        onClick={() => {
+          onDelete(product.id);
+        }}
+      >
+        <DeleteIcon fill="#00000075" className={styles.icon} />
+      </button>
+      <button
+        className={styles.buttonLike}
+        onClick={() => {
+          onLike(product.id);
+        }}
+      >
+        <LikeIcon
+          fill={product.isLiked ? "#ff7474" : "#00000075"}
+          className={styles.icon}
+        />
+      </button>
     </li>
   );
 };

@@ -1,0 +1,141 @@
+section{
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff1a;
+  padding: 30px 10px;
+  border-radius: 12px;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fieldset {
+  border: 1px solid #e3e3e333;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.radio {
+  display: none;
+}
+
+.categoryGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+  column-gap: 10px;
+}
+
+.categoryGroup label {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: #0000006b;
+  font-size: 13px;
+  background-color: rgba(143, 166, 216, 0.5);
+  border-radius: 12px;
+  padding: 5px 10px;
+  position: relative;
+  font-weight: bold;
+}
+
+.categoryGroup label::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: 5px;
+  top: 35%;
+  transition: all 0.3s ease;
+}
+
+.categoryGroup label.active::before {
+  background-color: #00ffb0;
+}
+
+.categoryGroup label.active {
+  color: #d7d7d7;
+}
+
+.title,
+.description {
+  resize: none;
+}
+
+.title,
+.description,
+.image,
+.price {
+  width: 100%;
+  color: #d7d7d7;
+  border: 1px solid #e3e3e333;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.title::placeholder,
+.description::placeholder,
+.image::placeholder,
+.price::placeholder {
+  color: #bbbbbb85;
+}
+
+.submit {
+  margin-top: 20px;
+  background-color: #00ffb0;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.conteinerPrice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.currency {
+  background-color: rgba(143, 166, 216, 0.5);
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #0d2344;
+}
+
+.requiredNote {
+  font-size: 14px;
+  color: #8fa6d880;
+}
+
+.legend,
+.label {
+  font-size: 16px;
+}
+
+.label {
+  margin-left: 10px;
+}
+
+.button {
+  display: flex;
+  margin-bottom: 25px;
+  width: max-content;
+}
+
+.backButton {
+  width: 22px;
+  height: 22px;
+}

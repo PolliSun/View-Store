@@ -1,7 +1,3 @@
-.section {
-    padding: 20px 10px;
-}
-
 .navigation {
     display: flex;
     justify-content: flex-end;
@@ -18,8 +14,7 @@
 }
 
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(160px, 22vw, 300px), 1fr));
     gap: 7px;
 }

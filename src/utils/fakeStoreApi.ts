@@ -17,3 +17,19 @@ const request = async <T>(
 };
 
 export const getProductsApi = () => request<TProduct[]>("/products");
+
+export const getProductById = (id: number) =>
+  request<TProduct>(`/products/${id}`);
+
+export const createProductApi = (product: Omit<TProduct, "id">) => {
+  return request<TProduct>("/products", {
+    method: "POST",
+    body: JSON.stringify(product),
+    headers: { "Content-Type": "application/json" },
+  });
+};
+
+export const deleteProductById = (id: number) =>
+  request<void>(`/products/${id}`, {
+    method: "DELETE",
+  }).then(() => id);
