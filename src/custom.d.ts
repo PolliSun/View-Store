@@ -25,7 +25,7 @@ declare module "*.json" {
   export default content;
 }
 
-declare module '*.ico' {
+declare module "*.ico" {
   const content: string;
   export default content;
 }

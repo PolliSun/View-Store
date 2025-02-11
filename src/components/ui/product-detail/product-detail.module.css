@@ -1,6 +1,21 @@
-section{
+.section {
   display: flex;
   flex-direction: column;
+}
+
+.button {
+  display: flex;
+  margin-bottom: 25px;
+  width: max-content;
+}
+
+.backButton {
+  width: 25px;
+  height: 25px;
+}
+
+.button:hover .backButton {
+  fill: #a5ffe1;
 }
 
 .article {
@@ -12,58 +27,76 @@ section{
   gap: 15px;
 }
 
-.conteiner {
+.conteinerTitle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.conteinerTitle,
+.conteinerImage {
   gap: 20px;
+}
+
+.title {
+  font-size: clamp(1.125rem, 0.7184rem + 1.8072vw, 1.875rem);
+  color: #d1d1d1;
+  font-family: "Kelly Slab", "Arial", sans-serif;
+}
+
+.price {
+  font-size: clamp(1rem, 0.7967rem + 0.9036vw, 1.375rem);
+  white-space: nowrap;
+  letter-spacing: 1px;
+  background-color: #0d2344;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.conteinerImage {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .about {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
-.button {
-  display: flex;
-  margin-bottom: 25px;
+.category,
+.aboutText {
+  background-color: rgba(143, 166, 216, 0.5);
+  border-radius: 12px;
+  padding: 3px 10px;
   width: max-content;
-}
-
-.backButton {
-  width: 22px;
-  height: 22px;
-}
-
-.image {
-  width: 100%;
-  aspect-ratio: 2 / 2.3;
-  border-radius: 10px;
-}
-
-.title {
-  font-size: 18px;
-  color: #d1d1d1;
+  font-size: clamp(0.8125rem, 0.5753rem + 1.0542vw, 1.25rem);
 }
 
 .description {
   color: #8fa6d8;
-  text-align: center;
-  font-size: 15px;
+  text-align: justify;
+  font-size: clamp(0.9375rem, 0.7003rem + 1.0542vw, 1.375rem);
   padding: 0 15px;
+  letter-spacing: 0.5px;
 }
 
-.category,
-.text {
-  background-color: rgba(143, 166, 216, 0.5);
-  border-radius: 12px;
-  padding: 3px 10px;
-  font-size: 13px;
-  width: max-content;
-}
-
-.price {
-  font-size: 15px;
-  white-space: nowrap;
-  letter-spacing: 1px;
+@media (min-width: 768px) {
+  .conteinerImage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .article {
+    padding: 40px 20px;
+  }
+  .backButton {
+    width: 30px;
+    height: 30px;
+  }
 }

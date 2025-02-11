@@ -5,4 +5,39 @@
   background-color: #ffffff1a;
   padding: 30px 10px;
   border-radius: 12px;
+  color: #d1d1d1;
+}
+
+.title {
+  font-size: clamp(1.125rem, 0.7184rem + 1.8072vw, 1.875rem);
+  font-family: "Kelly Slab", "Arial", sans-serif;
+}
+
+.description {
+  font-size: clamp(0.9375rem, 0.7003rem + 1.0542vw, 1.375rem);
+}
+
+.paragraph {
+  font-size: clamp(0.8125rem, 0.5753rem + 1.0542vw, 1.25rem);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.item {
+  font-size: clamp(0.8125rem, 0.6431rem + 0.753vw, 1.125rem);
+}
+
+.link {
+  border-bottom: 1px solid #00ffb0;
+  color: #00ffb0;
+}
+
+.link:hover {
+  color: #a5ffe1;
+  fill: #a5ffe1;
 }

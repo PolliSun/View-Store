@@ -6,7 +6,7 @@ import { ProductCard } from "../../product-card/product-card";
 type ProductListUIProps = {
   products: TProduct[];
   filter: string;
-  setFilter: ( sortBy: "all" | "favorites") => void;
+  setFilter: (sortBy: "all" | "favorites") => void;
 };
 
 export const ProductListUI: FC<ProductListUIProps> = ({
@@ -34,11 +34,16 @@ export const ProductListUI: FC<ProductListUIProps> = ({
           favorites
         </button>
       </nav>
-      <ul className={styles.list}>
-        {products.map((product) => (
-          <ProductCard product={product} key={product.id} />
-        ))}
-      </ul>
+
+      {filter === "favorites" && products.length === 0 ? (
+        <p className={styles.noFavoritesText}>No favorite products yet.</p>
+      ) : (
+        <ul className={styles.list}>
+          {products.map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </ul>
+      )}
     </section>
   );
 };

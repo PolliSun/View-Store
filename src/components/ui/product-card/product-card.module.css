@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.container:hover {
+  background-color: #ddeaff47;
+}
+
 .article {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -15,23 +19,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-.buttonDelete,
-.buttonLike {
+.button {
   display: flex;
   position: absolute;
-  background-color: rgba(143, 166, 216, 0.5);
-  border-radius: 50%;
-  align-items: center;
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.button:hover .icon {
+  fill: #a5ffe1;
 }
 
 .buttonDelete {
   bottom: 5px;
-  left: 5px;
-  
+  right: 5px;
 }
 
 .buttonLike {
@@ -40,30 +44,18 @@
 }
 
 .icon {
-  height: 12px;
+  height: 18px;
   width: 100%;
 }
 
-/* .icon {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 1;
-  transition: all 0.3s ease;
-}
-
-.iconLiked {
-  fill: red;
-  stroke: red;
-} */
-
 .image {
-  height: 80px;
-  width: 80px;
+  width: 100%;
   border-radius: 10px;
+  aspect-ratio: 1 / 1;
 }
 
 .title {
-  font-size: 10px;
+  font-size: clamp(0.75rem, 0.5467rem + 0.9036vw, 1.125rem);
   color: #d1d1d1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -72,9 +64,41 @@
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  font-family: "Kelly Slab", "Arial", sans-serif;
 }
 
 .price {
-  font-size: 11px;
+  font-size: clamp(0.6875rem, 0.4842rem + 0.9036vw, 1.0625rem);
   text-align: end;
+  background-color: #0d2344;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+@media (min-width: 550px) and (max-width: 1024px) {
+  .icon {
+    height: 20px;
+  }
+  .button {
+    height: 22px;
+    width: 22px;
+  }
+  .article {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .icon {
+    height: 22px;
+  }
+  .button {
+    height: 24px;
+    width: 24px;
+  }
+  .article {
+    padding: 20px;
+  }
 }

@@ -1,6 +1,21 @@
-section{
+.section {
   display: flex;
   flex-direction: column;
+}
+
+.button {
+  display: flex;
+  margin-bottom: 25px;
+  width: max-content;
+}
+
+.backButton {
+  width: 25px;
+  height: 25px;
+}
+
+.button:hover .backButton {
+  fill: #a5ffe1;
 }
 
 .form {
@@ -19,7 +34,7 @@ section{
 }
 
 .fieldset {
-  border: 1px solid #e3e3e333;
+  border: 1px solid #e3e3e363;
   border-radius: 12px;
   padding: 10px;
 }
@@ -39,13 +54,17 @@ section{
   display: flex;
   justify-content: center;
   cursor: pointer;
-  color: #0000006b;
-  font-size: 13px;
-  background-color: rgba(143, 166, 216, 0.5);
+  color: #0000008c;
+  font-size: clamp(0.8125rem, 0.6431rem + 0.753vw, 1.125rem);
+  background-color: #8fa6d880;
   border-radius: 12px;
   padding: 5px 10px;
   position: relative;
   font-weight: bold;
+}
+
+.categoryGroup label:hover {
+  background-color: #ffffff61;
 }
 
 .categoryGroup label::before {
@@ -79,17 +98,17 @@ section{
 .price {
   width: 100%;
   color: #d7d7d7;
-  border: 1px solid #e3e3e333;
+  border: 1px solid #e3e3e363;
   border-radius: 12px;
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: clamp(0.9375rem, 0.7003rem + 1.0542vw, 1.375rem);
 }
 
 .title::placeholder,
 .description::placeholder,
 .image::placeholder,
 .price::placeholder {
-  color: #bbbbbb85;
+  color: #8fa6d880;
 }
 
 .submit {
@@ -97,8 +116,12 @@ section{
   background-color: #00ffb0;
   padding: 5px 10px;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: clamp(1rem, 0.8645rem + 0.6024vw, 1.25rem);
   font-weight: bold;
+}
+
+.submit:hover {
+  background-color: #a5ffe1;
 }
 
 .conteinerPrice {
@@ -111,31 +134,39 @@ section{
   background-color: rgba(143, 166, 216, 0.5);
   border-radius: 50%;
   padding: 5px 10px;
-  font-size: 16px;
-  color: #0d2344;
+  color: #00ffb0;
+  font-size: clamp(1rem, 0.8645rem + 0.6024vw, 1.25rem);
 }
 
 .requiredNote {
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.7395rem + 0.6024vw, 1.125rem);
   color: #8fa6d880;
 }
 
 .legend,
 .label {
-  font-size: 16px;
+  font-size: clamp(1rem, 0.695rem + 1.3554vw, 1.5625rem);
+  color: #fff;
 }
 
 .label {
   margin-left: 10px;
 }
 
-.button {
-  display: flex;
-  margin-bottom: 25px;
-  width: max-content;
-}
+@media (min-width: 768px) {
+  .backButton {
+    width: 30px;
+    height: 30px;
+  }
 
-.backButton {
-  width: 22px;
-  height: 22px;
+  .form {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .field {
+    gap: 10px;
+  }
+  .categoryGroup {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

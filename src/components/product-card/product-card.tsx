@@ -10,7 +10,7 @@ type ProductCardProps = {
 
 export const ProductCard: FC<ProductCardProps> = ({ product }) => {
   const dispatch = useDispatch();
-  
+
   const handleLike = (id: number) => {
     dispatch(likeProduct(id));
   };

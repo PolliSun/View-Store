@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import "../../index.css";
+import styles from "./app.module.css";
 import { Header } from "../ui/header/header";
 import { useDispatch } from "../../services/store";
-import styles from "./app.module.css";
 import { Routes, Route } from "react-router-dom";
 import { fetchProducts } from "../../services/productSlice";
 import { ProductDetailsPage } from "../../pages/product-detail-page";
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<ProductDetailsPage />} />
-          <Route path="/create- product" element={<CreateProductPage />} />
+          <Route path="/create-product" element={<CreateProductPage />} />
         </Routes>
       </main>
     </>

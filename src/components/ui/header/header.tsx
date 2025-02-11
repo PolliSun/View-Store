@@ -16,13 +16,23 @@ export const Header: FC = () => {
           </NavLink>
         </div>
         <nav className={styles.navigation}>
-          <NavLink to={"/products"} className={styles.link}>
-            <ProductsIcon fill="#00ffb0" className={styles.icon} />
-            <p>products</p>
+          <NavLink
+            to={"/products"}
+            className={({ isActive }) =>
+              `${styles.link} ${isActive ? styles.active : ""}`
+            }
+          >
+            <ProductsIcon className={styles.icon} />
+            <p className={styles.text}>products</p>
           </NavLink>
-          <NavLink to={"/create- product"} className={styles.link}>
-            <CreateIcon fill="#00ffb0" className={styles.icon} />
-            <p>create</p>
+          <NavLink
+            to={"/create-product"}
+            className={({ isActive }) =>
+              `${styles.link} ${isActive ? styles.active : ""}`
+            }
+          >
+            <CreateIcon className={styles.icon} />
+            <p className={styles.text}>create</p>
           </NavLink>
         </nav>
       </div>

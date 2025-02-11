@@ -18,20 +18,21 @@ export const ProductDetailUI: FC<ProductDetailUIProps> = ({
         <BackButton fill="#00ffb0" className={styles.backButton} />
       </button>
       <article className={styles.article}>
-        <div className={styles.conteiner}>
+        <div className={styles.conteinerTitle}>
           <h2 className={styles.title}>{product.title}</h2>
           <p className={styles.price}>$ {product.price}</p>
         </div>
         <p className={styles.category}>{product.category}</p>
-
-        <img
-          className={styles.image}
-          src={product.image}
-          alt="image product."
-        />
-        <div className={styles.about}>
-          <span className={styles.text}>about :</span>
-          <p className={styles.description}>{product.description}</p>
+        <div className={styles.conteinerImage}>
+          <img
+            className={styles.image}
+            src={product.image}
+            alt="image product"
+          />
+          <div className={styles.about}>
+            <span className={styles.aboutText}>about :</span>
+            <p className={styles.description}>{product.description}</p>
+          </div>
         </div>
       </article>
     </section>

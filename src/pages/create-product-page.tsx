@@ -25,7 +25,7 @@ export const CreateProductPage: FC = () => {
     description: "",
     image: "",
     price: 0.49,
-    category: "",
+    category: categories[0],
   });
 
   const handleChange = (
@@ -38,9 +38,21 @@ export const CreateProductPage: FC = () => {
     }));
   };
 
+  const clearForm = () => {
+    setProduct({
+      title: "",
+      description: "",
+      image: "",
+      price: 0.49,
+      category: "",
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(createProduct(product));
+    clearForm();
+    navigation("/products");
   };
 
   return (

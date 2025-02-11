@@ -22,15 +22,10 @@ export const ProductsPage: FC = () => {
       : products;
 
   return (
-    <>
-      <ProductListUI
-        products={filteredProducts}
-        filter={filter}
-        setFilter={handleFilterChange}
-      />
-      {filter === "favorites" && filteredProducts.length === 0 && (
-        <span>Not favorite products</span>
-      )}
-    </>
+    <ProductListUI
+      products={filteredProducts}
+      filter={filter}
+      setFilter={handleFilterChange}
+    />
   );
 };

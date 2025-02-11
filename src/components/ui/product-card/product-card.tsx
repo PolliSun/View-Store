@@ -30,11 +30,11 @@ export const ProductCardUI: FC<ProductCardUIProps> = ({
         />
         <div className={styles.info}>
           <h2 className={styles.title}>{product.title}</h2>
-          <p className={styles.price}>${product.price}</p>
+          <p className={styles.price}>$ {product.price}</p>
         </div>
       </Link>
       <button
-        className={styles.buttonDelete}
+        className={`${styles.button} ${styles.buttonDelete}`}
         onClick={() => {
           onDelete(product.id);
         }}
@@ -42,7 +42,7 @@ export const ProductCardUI: FC<ProductCardUIProps> = ({
         <DeleteIcon fill="#00000075" className={styles.icon} />
       </button>
       <button
-        className={styles.buttonLike}
+        className={`${styles.button} ${styles.buttonLike}`}
         onClick={() => {
           onLike(product.id);
         }}

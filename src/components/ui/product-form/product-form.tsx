@@ -60,6 +60,8 @@ export const ProductFormUI: FC<ProductFormUIProps> = ({
             onChange={onChange}
             placeholder="enter product title"
             className={styles.title}
+            minLength={3}
+            maxLength={100}
             required
           />
         </div>
@@ -75,13 +77,15 @@ export const ProductFormUI: FC<ProductFormUIProps> = ({
             onChange={onChange}
             placeholder="enter product description"
             className={styles.description}
+            minLength={10}
+            maxLength={500}
             required
           />
         </div>
 
         <div className={styles.field}>
           <label className={styles.label} htmlFor="image">
-            Add product image URL *
+            Add the product image URL *
           </label>
           <input
             type="text"
@@ -92,12 +96,13 @@ export const ProductFormUI: FC<ProductFormUIProps> = ({
             value={product.image}
             required
             placeholder="enter image URL"
+            pattern="https?://.*\.(jpg|jpeg|png|gif)$"
           />
         </div>
 
         <div className={styles.field}>
           <label className={styles.label} htmlFor="price">
-            Add product price *
+            Add the product price *
           </label>
           <div className={styles.conteinerPrice}>
             <input
