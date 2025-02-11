@@ -6,9 +6,9 @@
 
 @font-face {
   font-family: "Kelly Slab";
-  src: url(/View-Store/static/fonts/f4642244bfd3a85cc2e2.woff2) format("woff2"),
-    url(/View-Store/static/fonts/13af7234dce1bc9c5a9a.woff) format("woff"),
-    url(/View-Store/static/fonts/5d65ab2baccc21334ba6.ttf) format("truetype");
+  src: url(/static/fonts/f4642244bfd3a85cc2e2.woff2) format("woff2"),
+    url(/static/fonts/13af7234dce1bc9c5a9a.woff) format("woff"),
+    url(/static/fonts/5d65ab2baccc21334ba6.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,9 +16,9 @@
 
 @font-face {
   font-family: "Play";
-  src: url(/View-Store/static/fonts/d2d1093c0cee2b8fcd17.woff2) format("woff2"),
-    url(/View-Store/static/fonts/0aa634a36f806f0c3e11.woff) format("woff"),
-    url(/View-Store/static/fonts/e0424c5771f87080b05e.ttf) format("truetype");
+  src: url(/static/fonts/d2d1093c0cee2b8fcd17.woff2) format("woff2"),
+    url(/static/fonts/0aa634a36f806f0c3e11.woff) format("woff"),
+    url(/static/fonts/e0424c5771f87080b05e.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
